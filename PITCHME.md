@@ -1,76 +1,286 @@
+
 ---
 marp: true
-title: Marp CLI example
-description: Hosting Marp slide deck on the web
-theme: uncover
+title: XML e Web Semantics - nbmcd
+description: XML no contexto de Web Semantics
+theme: gaia
 transition: fade
 paginate: true
 _paginate: false
 ---
+<style>
+section {
+    background: #f2f2f2;
+    color: #2b1515;
+}
+h1 {
+    color: #0e0606;
+    font-size: 70px;
+}
+span {
+    font-weight: bold;
+    color: #e04556;
+}
+a {
+    font-size: 30px;
+}
+</style>
+<!-- _class: lead -->
+# XML e Web Semantics
+Nilo Drumond
 
-![bg opacity](./assets/gradient.jpg)
+---
+# World Wide Web
+- Acessível ao <span>ser humano</span>
+- Hypertext Markup Language (HTML)
 
-# <!--fit--> Marp CLI example
+<!--
+Conjunto de padrões que tem como um dos principais objetivos ser acessível ao ser humano
+HTML, hyperlinks
+-->
 
-Hosting Marp slide deck on the web
+---
+<!-- _class: lead -->
 
-https://github.com/yhatt/marp-cli-example
+# Semantic Web
+Web acessível para <span>computadores</span>
 
-<style scoped>a { color: #36c; }</style>
+<!-- 
+Uma extensão do World Wide Web
+objetivo: permitir que as máquinas leiam e compreendam as informações da web
+-->
 
-<!-- This is presenter note. You can write down notes through HTML comment. -->
+--- 
+
+# Semantic Web
+- Processar, transferir e integrar informações
+- Repositório de documentos 🡒 Base de conhecimento <span>estruturada</span>
+
+<!--
+Não apenas padrões para apresentar informações para o usuário,
+mas tornar essas informações acessíveis para a máquina
+
+Semântica da Web tem como objetivo transformar a Web de um repositório de documentos
+em uma base de conhecimento estruturada e interconectada.
+-->
+
+--- 
+
+<!-- _class: lead -->
+# XML
+e<span>X</span>tensible <span>M</span>arkup <span>L</span>anguage
+
+<!--
+Nesse contexto de Semantic Web, um dos padrões que surgem é o XML.
+-->
 
 ---
 
-![Marp bg 60%](https://raw.githubusercontent.com/marp-team/marp/master/marp.png)
+# XML
+- Estrutura hierárquica
+- Baseado em tags
+- Dados estruturados
+- Legível para humanos e máquinas
+- Extensível
+
+<!--
+Representar dados estruturados e organizados. [exemplo de items de uma loja com preços]
+Além de ser compreensível para máquinas, ele é legível ao ser humano, o que facilita depuração
+Extensível: o usuário pode criar suas próprias tags
+-->
 
 ---
 
-<!-- _backgroundColor: "#123" -->
-<!-- _color: "#fff" -->
+![bg](./assets/xml-5.png)
 
-##### <!--fit--> [Marp CLI](https://github.com/marp-team/marp-cli) + [GitHub Pages](https://github.com/pages) | [Netlify](https://www.netlify.com/) | [Vercel](https://vercel.com/)
 
-##### <!--fit--> 👉 The easiest way to host<br />your Marp deck on the web
-
----
-
-![bg right 60%](https://icongr.am/octicons/mark-github.svg)
-
-## **[GitHub Pages](https://github.com/pages)**
-
-#### Ready to write & host your deck!
-
-[![Use this as template h:1.5em](https://img.shields.io/badge/-Use%20this%20as%20template-brightgreen?style=for-the-badge&logo=github)](https://github.com/yhatt/marp-cli-example/generate)
+<!--
+XML tem como objetivo armazenar e estruturar os dados, não apresentar
+outra linguagem, como javascript que vai ler esses dados e decidir como apresentar
+-->
 
 ---
 
-![bg right 60%](https://icongr.am/simple/netlify.svg?colored)
+# XML
+- Elementos
+- Atributos
 
-## **[Netlify](https://www.netlify.com/)**
+![bg right:70%](./assets/xml-5.png)
 
-#### Ready to write & host your deck!
+<!-- 
+A base do XML são os elementos e os atributos. 
+Um elemento é definido pela suas tags de abertura e fechamento e o seu conteudo.
+Um atributo são dados associados a um elemento. Semelhante ao HTML.
+Um elemento vazio pode carregar dados por meio de atributos.
+-->
 
-[![Deploy to Netlify h:1.5em](./assets/netlify-deploy-button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yhatt/marp-cli-example)
+---
+# XML - Prolog
+- Declaração XML
+    - version
+    - encoding
+    - standalone
+- Referência externa
+
+![bg right contain](./assets/prolog.png)
+
+<!--
+O Prolog consiste em uma declaração XML e uma opcional referência a estruturas externas
+Na declaração xml nos temos esses campos:
+version é a versão do XML que está sendo usada naquele arquivo
+encoding é qual a codificação caracteres sendo usada
+standalone é um campo opcional que diz se o documento faz referência a estruturas externas ou não.
+-->
+
+---
+<!-- _class: lead -->
+# DTD e XML Schema
+<span>Validar</span> o formato do dados
+
+<!-- 
+No mesmo contexto surge a necessidade de definir formatos pros dados
+de forma que diferentes grupos de pessoas concordem com o formato.
+Sejam grupos diferentes equipes da mesma empresa,ou entre um cliente e um servidor...
+Nos dois casos a declaração pode ser feita dentro do arquivo ou em outro arquivo. Mas na prática quase sempre é feito em um arquivo externo por mótivos manutenção e reusabilidade.
+-->
+
+--- 
+<!-- _class: lead -->
+# DTD
+<span>D</span>ocument <span>T</span>ype <span>D</span>efinition
+![bg right contain](./assets/dtd-1.png)
+
+<!-- 
+Numa declaração DTD nós definimos um documento. Nesse caso uma nota/note
+Definimos os elementos permitidos num documento "note" e sua estrutura
+nesse caso, o elemento note tem os elementos ...
+e esses elementos tem dados de texto. PCDATA = texto consistente de caracteres permitidos
+-->
+
+--- 
+<!-- _class: lead -->
+
+# DTD
+<span>D</span>ocument <span>T</span>ype <span>D</span>efinition
+![bg right contain](./assets/dtd-3.png)
+
+<!--
+Aqui temos um exemplo de um XML que respeita o DTD mostrado no slide anterior.
+Na segundo linha, ainda fazendo parte do Prolog, temos a referência externa de DOCTYPE. Que define o dtd que será usado para este documento.
+nesse caso será um documento "note" que está definido no arquivo Note.dtd que está localizado em algum lugar no sistema
+-->
+---
+
+# DTD
+- cardinalidade
+- tipos de atributos
+- tipos de valor
+![bg right contain](./assets/dtd-4.png)
+
+<!--
+O DTD também é capaz de representar a contagem de elementos, 0-1, 0+, 1+; Normalmente se chama isso de operador de cardinalidade
+Tipos de atributos: ID unico, referencia a um ID unico, string (PCDATA)
+Tipos de valor: obrigatorio, opcional, fixo.
+-->
+---
+
+# DTD
+![bg right:70% contain](./assets/dtd-5.png)
+
+
+<!--
+Aqui a gente tem um exemplo de XML que respeita aquele DTD
+-->
+---
+
+# DTD
+### Limitações
+- Tipos de dados
+- Namespaces
+
+<!--
+Porém, DTD tem suas limitações. Em destaque um conjunto limitado de tipos de dados e não ser capaz de suportar namespaces.
+-->
+---
+<!-- _class: lead -->
+# XML Schema
+
+![bg right:55% contain](./assets/xmls-1.png)
+
+<!--
+Para superar essas limitações, foi desenvolvido o XML Schema. Escrito em XML e exerce o mesmo papel do DTD só que de forma mais flexível e poderosa. 
+-->
 
 ---
 
-![bg right 60%](https://icongr.am/simple/zeit.svg)
+<!-- _class: lead -->
+# XML Schema
 
-## **[Vercel](https://vercel.com/)**
+![bg right:55% contain](./assets/xmls-2.png)
 
-#### Ready to write & host your deck!
 
-[![Deploy to Vercel h:1.5em](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/yhatt/marp-cli-example)
-
----
-
-### <!--fit--> :ok_hand:
+<!--
+Aqui está um documento XML que respeita aquele XML Schema. Como vocês podem ver ao invés de ter aquele DOCTYPE, definimos diretamente no elemento note qual o formato dele e em que arquivo está localizado
+-->
 
 ---
 
-![bg 40% opacity blur](https://avatars1.githubusercontent.com/u/3993388?v=4)
+# XML Schema
+- tipos de dados mais avançados
+    - data
+    - inteiros
+    - decimais
+- tipos de dados definidos pelo usuário
 
-### Created by Yuki Hattori ([@yhatt](https://github.com/yhatt))
+<!-- 
+TODO: comment
+-->
+---
 
-https://github.com/yhatt/marp-cli-example
+# XML Schema
+### Tipos complexos
+![bg right:55% contain](./assets/xmls-3.png)
+
+<!-- 
+TODO: comment
+-->
+---
+
+# XML Schema
+### Namespaces
+- conflitos de nome
+![bg right contain](./assets/xmls-4.png)
+
+
+<!-- 
+TODO: comment
+-->
+---
+
+# Conclusão
+- importância do XML e Web Semantics
+- JSON
+- TOML, YAML
+- SVG
+
+
+<!--
+Nós vimos a importância da Semântica Web na internet como um todo e o XML foi uma ferramenta crucialem transformar a internet de um conjunto aleatório de sites na internet "inteligente" que é hoje, mais integrada.
+
+Embora o XML ainda tenha o seu lugar,ele não é mais tão popular quanto era antigamente. 
+
+Para trocas de dados, depois da popularização de APIs RESTful, o JSON ganhou bastante popularidade. Tanto por ser mais leve quanto por ser suportado nativamente pelo Javascript, que é a linguagem da web querendo ou não considerando que é o que todo o navegador roda.
+
+Para arquivos de configuração/definição, TOML e YAML representam alternativas muito mais leves e legíveis. 
+
+Mas ainda há o seu uso. O suporte a namespaces por exemplo é algo que nenhuma outra linguagem markup popular suporte. 
+AndroidManifest
+SVG
+Casos mais complexos, ja que existem linguagens semlhantes e mais simples
+-->
+
+---
+# Referências bibliográficas
+- [ANTONIOU, Grigoris et al. A Semantic Web Primer. The MIT Press. 2012](http://prof.mau.ac.ir/images/Uploaded_files/A%20Semantic%20Web%20Primer-The%20MIT%20Press%20(2012)%5B7460174%5D.PDF)
+- [DECKER, Stefan et al. The Semantic Web: The Roles of XML and RDF. IEEE. 2000](https://ieeexplore.ieee.org/document/877487)
+
