@@ -3,7 +3,6 @@ marp: true
 title: XML e Web Semantics - nbmcd
 description: XML no contexto de Web Semantics
 theme: gaia
-transition: fade
 paginate: true
 _paginate: false
 ---
