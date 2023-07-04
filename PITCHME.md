@@ -9,7 +9,7 @@ _paginate: false
 ---
 <style>
 section {
-    background: #f2f2f2;
+    background: #e1e2e7;
     color: #2b1515;
 }
 h1 {
@@ -18,7 +18,7 @@ h1 {
 }
 span {
     font-weight: bold;
-    color: #e04556;
+    color: #2b8fff;
 }
 a {
     font-size: 30px;
