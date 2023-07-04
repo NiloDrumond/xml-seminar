@@ -1,4 +1,3 @@
-
 ---
 marp: true
 title: XML e Web Semantics - nbmcd
