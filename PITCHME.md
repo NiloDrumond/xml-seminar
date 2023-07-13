@@ -24,7 +24,7 @@ a {
 }
 </style>
 <!-- _class: lead -->
-# XML e Web Semantics
+# XML e Semantic Web
 Nilo Drumond
 
 ---
@@ -51,15 +51,39 @@ objetivo: permitir que as máquinas leiam e compreendam as informações da web
 --- 
 
 # Semantic Web
+- Web com semântica
 - Processar, transferir e integrar informações
 - Repositório de documentos 🡒 Base de conhecimento <span>estruturada</span>
 
 <!--
-Não apenas padrões para apresentar informações para o usuário,
-mas tornar essas informações acessíveis para a máquina
+Web com semântica, que as os dados dentro da web sejam mais do que só dados, mas que essas informações tenham significados bem definidos.
+Que permita a máquina processar, transferir, integrar informações.
+Um exemplo que define bem, é que uma web sem semântica, se você pesquisar por "papel", ele vai te dar todas as instâncias da palavra papel, como um conjunto de caractéres. No momento que você tem a semântica, o sistema poderá entender - pelo contexto por exemplo - se você está se referindo ao material papel ou um papel que alguém desempenha no teatro. 
 
-Semântica da Web tem como objetivo transformar a Web de um repositório de documentos
-em uma base de conhecimento estruturada e interconectada.
+Ou seja, isso transforma a internet de um repositório de documentos em uma base de conhecimento estruturada. Que é capaz de mais do que só mostrar dados, mas entender eles.
+-->
+
+---
+<!-- _class: lead -->
+# RDF
+<span>R</span>esource <span>D</span>escription <span>F</span>ramework
+<!--
+Nesse contexto da Web semântica, uma das principais tecnologias que surgem é o RDF
+Ela serve pra representar informações sobre recursos na web usando a forma de triplas
+-->
+---
+# RDF
+- sujeito
+- predicado
+- objeto
+
+![bg right:70% contain](./assets/rdf-1.png)
+
+
+<!--
+sujeito-predicado-objeto
+
+O que é mais importante pra gente aqui nessa apresentação é esse formato de dados que está sendo usado nesse documento RDF. Que é o XML
 -->
 
 --- 
@@ -68,8 +92,8 @@ em uma base de conhecimento estruturada e interconectada.
 # XML
 e<span>X</span>tensible <span>M</span>arkup <span>L</span>anguage
 
-<!--
-Nesse contexto de Semantic Web, um dos padrões que surgem é o XML.
+<!-- 
+E o principal objetivo que o XML tem  é fornecer uma maneira padronizada e estruturada de codificar dados
 -->
 
 ---
@@ -77,7 +101,6 @@ Nesse contexto de Semantic Web, um dos padrões que surgem é o XML.
 # XML
 - Estrutura hierárquica
 - Baseado em tags
-- Dados estruturados
 - Legível para humanos e máquinas
 - Extensível
 
@@ -85,16 +108,6 @@ Nesse contexto de Semantic Web, um dos padrões que surgem é o XML.
 Representar dados estruturados e organizados. [exemplo de items de uma loja com preços]
 Além de ser compreensível para máquinas, ele é legível ao ser humano, o que facilita depuração
 Extensível: o usuário pode criar suas próprias tags
--->
-
----
-
-![bg](./assets/xml-5.png)
-
-
-<!--
-XML tem como objetivo armazenar e estruturar os dados, não apresentar
-outra linguagem, como javascript que vai ler esses dados e decidir como apresentar
 -->
 
 ---
@@ -110,6 +123,10 @@ A base do XML são os elementos e os atributos.
 Um elemento é definido pela suas tags de abertura e fechamento e o seu conteudo.
 Um atributo são dados associados a um elemento. Semelhante ao HTML.
 Um elemento vazio pode carregar dados por meio de atributos.
+
+Outra comparação com o HTML também é que:
+XML tem como objetivo armazenar e estruturar os dados, não apresentar
+outra linguagem, como javascript que vai ler esses dados e decidir como apresentar
 -->
 
 ---
@@ -211,10 +228,20 @@ Para superar essas limitações, foi desenvolvido o XML Schema. Escrito em XML e
 
 ---
 
-<!-- _class: lead -->
-# XML Schema
+![bg contain](./assets/dtd-1.png)
+![bg contain](./assets/xmls-1.png)
 
-![bg right:55% contain](./assets/xmls-2.png)
+<!--
+
+Aqui ta uma comparação entre o DTD e o XMLS, e embora o XML seja um arquivo maior, a gente vai ver que ele é bem mais poderoso, flexível e especifico nas suas definições
+-->
+
+---
+
+<!-- _class: lead -->
+
+![bg contain](./assets/xmls-1.png)
+![bg  contain](./assets/xmls-2.png)
 
 
 <!--
@@ -231,7 +258,8 @@ Aqui está um documento XML que respeita aquele XML Schema. Como vocês podem ve
 - tipos de dados definidos pelo usuário
 
 <!-- 
-TODO: comment
+Alguns pontos fortes do XMLS são dados mais avançados
+e tipos de dados definidos pelo usuário
 -->
 ---
 
@@ -240,7 +268,9 @@ TODO: comment
 ![bg right:55% contain](./assets/xmls-3.png)
 
 <!-- 
-TODO: comment
+Aqui a gente ta definindo um tipo complexo (que são justamente esse stipos definidos pelo usuário), chamado lecturerType,
+ele tem esses atributos, e essa sequencia de elementos
+como vocês podem ver ele também é capaz de demonstrar cardinalidade, sendo que no XMLS se usa esse minOccurrs e maxOccurs. o tipo, que nesse caso é string
 -->
 ---
 
@@ -251,21 +281,32 @@ TODO: comment
 
 
 <!-- 
-TODO: comment
+Outro destaque do XMLS é o suporte a namespaces do XML. O que são esses namespaces? Serve pra resolver conflitos de nome.
 -->
 ---
 
 # Conclusão
-- importância do XML e Web Semantics
-- JSON
-- TOML, YAML
-- SVG
+- A Web Semântica 
+- XML como parte da sua fundação
+
+<!-- 
+
+Recapitulando um pouco, a gente viu que a web semântica foi um passo importante em tornar a internet na internet "inteligente" de hoje, que não é apenas um conjunto aleatório de dados, mas uma rede estruturada e integrada de informações.
+E o XML foi uma parte crucial de sua fundação, pois permitiu das forma a essas informações.
+-->
+
+---
+
+# Futuro
+- JSON (JavaScript Object Notation)
+- YAML (YAML Ain't Markup Language)
+- TOML (Tom's Obvious Minimal Language)
+- SVG (Scalable Vector Graphics)
 
 
 <!--
-Nós vimos a importância da Semântica Web na internet como um todo e o XML foi uma ferramenta crucialem transformar a internet de um conjunto aleatório de sites na internet "inteligente" que é hoje, mais integrada.
 
-Embora o XML ainda tenha o seu lugar,ele não é mais tão popular quanto era antigamente. 
+Embora o XML ainda tenha o seu lugar, ele não é mais tão popular quanto era antigamente. 
 
 Para trocas de dados, depois da popularização de APIs RESTful, o JSON ganhou bastante popularidade. Tanto por ser mais leve quanto por ser suportado nativamente pelo Javascript, que é a linguagem da web querendo ou não considerando que é o que todo o navegador roda.
 
