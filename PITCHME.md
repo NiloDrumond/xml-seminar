@@ -29,12 +29,31 @@ Nilo Drumond
 
 ---
 # World Wide Web
+- Conjunto de padrões
 - Acessível ao <span>ser humano</span>
-- Hypertext Markup Language (HTML)
+- HTML (HyperText Markup Language)
+    - Identificar tipos de conteúdo e estruturas
+    - Inclusão de multimidia
+- Protocolo HTTP (HyperText Transfer Protocol)
 
 <!--
-Conjunto de padrões que tem como um dos principais objetivos ser acessível ao ser humano
-HTML, hyperlinks
+HTTP (Hypertext Transfer Protocol): Este é o protocolo que permite a comunicação entre clientes e servidores na web. Quando você digita um URL na barra de endereços do seu navegador, o navegador (atuando como um cliente) envia uma solicitação HTTP para o servidor que hospeda o recurso correspondente a esse URL. O servidor então responde, enviando o recurso solicitado de volta ao cliente.
+-->
+
+---
+
+## Tim Berners-Lee
+- CERN
+- Comunicação e colaboração entre cientistas
+- Publicar informações e criar links
+
+![bg right cover](./assets/tim.png)
+
+<!--
+- Laboratório Europeu de Física de Partícula
+Facilitar a comunicação e colaboração entre cientistas ao redor do mundo.
+Tornar as informações acessíveis de forma universal, independentemente do tipo de hardware, software ou infraestrutura de rede.
+Criar uma estrutura de informações aberta e descentralizada onde qualquer pessoa pode publicar informações e criar links para qualquer outro documento na web.
 -->
 
 ---
@@ -47,46 +66,23 @@ Web acessível para <span>computadores</span>
 Uma extensão do World Wide Web
 objetivo: permitir que as máquinas leiam e compreendam as informações da web
 -->
-
 --- 
 
 # Semantic Web
+- Tim Berners-Lee
 - Web com semântica
 - Processar, transferir e integrar informações
 - Repositório de documentos 🡒 Base de conhecimento <span>estruturada</span>
 
 <!--
+Também foi idealizada pelo Tim
 Web com semântica, que as os dados dentro da web sejam mais do que só dados, mas que essas informações tenham significados bem definidos.
 Que permita a máquina processar, transferir, integrar informações.
 Um exemplo que define bem, é que uma web sem semântica, se você pesquisar por "papel", ele vai te dar todas as instâncias da palavra papel, como um conjunto de caractéres. No momento que você tem a semântica, o sistema poderá entender - pelo contexto por exemplo - se você está se referindo ao material papel ou um papel que alguém desempenha no teatro. 
-
 Ou seja, isso transforma a internet de um repositório de documentos em uma base de conhecimento estruturada. Que é capaz de mais do que só mostrar dados, mas entender eles.
 -->
 
 ---
-<!-- _class: lead -->
-# RDF
-<span>R</span>esource <span>D</span>escription <span>F</span>ramework
-<!--
-Nesse contexto da Web semântica, uma das principais tecnologias que surgem é o RDF
-Ela serve pra representar informações sobre recursos na web usando a forma de triplas
--->
----
-# RDF
-- sujeito
-- predicado
-- objeto
-
-![bg right:70% contain](./assets/rdf-1.png)
-
-
-<!--
-sujeito-predicado-objeto
-
-O que é mais importante pra gente aqui nessa apresentação é esse formato de dados que está sendo usado nesse documento RDF. Que é o XML
--->
-
---- 
 
 <!-- _class: lead -->
 # XML
@@ -97,11 +93,35 @@ E o principal objetivo que o XML tem  é fornecer uma maneira padronizada e estr
 -->
 
 ---
+# XML - História
+- W3C (World Wide Web Consortium)
+- Surge pouco antes da Semantic Web
+- Fundamental para a Semantic Web
+
+<!--
+Estabelecido pelo W3C, que foi fundado pelo Tim Berners-Lee
+Surge um pouco de Tim propor a Semantic Web, ou seja teoricamente no contexto do WWW
+-->
+
+---
+# XML - Objetivos
+- Legível para humanos e máquinas
+- Flexibilidade
+- Interoperabilidade
+
+
+<!--
+    Simplicidade e legibilidade: O XML foi projetado para ser fácil de ler e escrever para humanos, além de ser interpretado por máquinas. Isto é feito através de um design de texto claro e o uso de tags para descrever o conteúdo.
+    Flexibilidade: O XML permite que os desenvolvedores definam suas próprias tags e estrutura de dados, o que significa que pode ser adaptado para uma ampla gama de aplicações e indústrias.
+    Interoperabilidade: O XML é uma maneira eficaz de estruturar e trocar dados entre diferentes sistemas, plataformas e linguagens de programação. Ele foi projetado para ser independente de hardware e software, permitindo que os dados sejam compartilhados e compreendidos universalmente.
+-->
+
+
+---
 
 # XML
 - Estrutura hierárquica
 - Baseado em tags
-- Legível para humanos e máquinas
 - Extensível
 
 <!--
@@ -129,8 +149,10 @@ XML tem como objetivo armazenar e estruturar os dados, não apresentar
 outra linguagem, como javascript que vai ler esses dados e decidir como apresentar
 -->
 
+
 ---
 # XML - Prolog
+- "Cabeçalho" do documento
 - Declaração XML
     - version
     - encoding
@@ -146,6 +168,15 @@ version é a versão do XML que está sendo usada naquele arquivo
 encoding é qual a codificação caracteres sendo usada
 standalone é um campo opcional que diz se o documento faz referência a estruturas externas ou não.
 -->
+
+---
+
+# Validação
+
+![bg contain](./assets/xml-comp-1.png)
+![bg contain](./assets/xml-comp-2.png)
+
+
 
 ---
 <!-- _class: lead -->
@@ -228,6 +259,8 @@ Para superar essas limitações, foi desenvolvido o XML Schema. Escrito em XML e
 
 ---
 
+## DTD x XML Schema
+
 ![bg contain](./assets/dtd-1.png)
 ![bg contain](./assets/xmls-1.png)
 
@@ -238,10 +271,9 @@ Aqui ta uma comparação entre o DTD e o XMLS, e embora o XML seja um arquivo ma
 
 ---
 
-<!-- _class: lead -->
-
+## XML Schema
 ![bg contain](./assets/xmls-1.png)
-![bg  contain](./assets/xmls-2.png)
+![bg contain](./assets/xmls-2.png)
 
 
 <!--
@@ -264,8 +296,14 @@ e tipos de dados definidos pelo usuário
 ---
 
 # XML Schema
-### Tipos complexos
-![bg right:55% contain](./assets/xmls-3.png)
+## Tipos Complexos
+![bg right contain](./assets/xmls-1.png)
+
+
+---
+## Tipos Complexos
+![bg contain](./assets/xmls-3.png)
+![bg contain](./assets/xmls-comp-2.png)
 
 <!-- 
 Aqui a gente ta definindo um tipo complexo (que são justamente esse stipos definidos pelo usuário), chamado lecturerType,
@@ -273,16 +311,75 @@ ele tem esses atributos, e essa sequencia de elementos
 como vocês podem ver ele também é capaz de demonstrar cardinalidade, sendo que no XMLS se usa esse minOccurrs e maxOccurs. o tipo, que nesse caso é string
 -->
 ---
+## Tipos Complexos
+![bg contain](./assets/xmls-comp-3.png)
+![bg contain](./assets/xmls-comp-4.png)
+
+---
 
 # XML Schema
 ### Namespaces
-- conflitos de nome
+- Evitar conflitos de nome
+- Reutilização
+- Modularização
 ![bg right contain](./assets/xmls-4.png)
 
 
 <!-- 
 Outro destaque do XMLS é o suporte a namespaces do XML. O que são esses namespaces? Serve pra resolver conflitos de nome.
 -->
+---
+## Namespaces
+![bg contain](./assets/namespace-1.png)
+![bg contain](./assets/namespace-2.png)
+
+---
+## Namespaces
+- Evitar conflitos de nome
+- Reutilização
+- Modularização
+![bg right contain](./assets/namespace-3.png)
+
+
+---
+
+<!-- _class: lead -->
+# XML na Semantic Web
+
+<!--
+A gente falou um pouco sobre Semantic Web, e um pouco sobre XML,
+mas onde que os dois encontram
+-->
+
+---
+# XML na Semantic Web
+- Estruturação dos dados
+- Interoperabilidade
+- Base para outras tecnologias
+
+---
+<!-- _class: lead -->
+# RDF
+<span>R</span>esource <span>D</span>escription <span>F</span>ramework
+<!--
+Nesse contexto da Web semântica, uma das principais tecnologias que surgem é o RDF
+Ela serve pra representar informações sobre recursos na web usando a forma de triplas
+-->
+---
+# RDF
+- sujeito
+- predicado
+- objeto
+
+![bg right:70% contain](./assets/rdf-1.png)
+
+
+<!--
+sujeito-predicado-objeto
+
+O que é mais importante pra gente aqui nessa apresentação é esse formato de dados que está sendo usado nesse documento RDF. Que é o XML
+-->
+
 ---
 
 # Conclusão
@@ -322,4 +419,7 @@ Casos mais complexos, ja que existem linguagens semlhantes e mais simples
 # Referências bibliográficas
 - [ANTONIOU, Grigoris et al. A Semantic Web Primer. The MIT Press. 2012](http://prof.mau.ac.ir/images/Uploaded_files/A%20Semantic%20Web%20Primer-The%20MIT%20Press%20(2012)%5B7460174%5D.PDF)
 - [DECKER, Stefan et al. The Semantic Web: The Roles of XML and RDF. IEEE. 2000](https://ieeexplore.ieee.org/document/877487)
+
+
+
 
