@@ -28,6 +28,16 @@ a {
 Nilo Drumond
 
 ---
+# Roteiro
+1. World Wide Web
+2. Semantic Web
+3. XML
+4. DTD
+5. XML Schema
+6. XML na Semantic Web
+7. Outras aplicações do XML
+
+---
 # World Wide Web
 - Conjunto de padrões
 - Acessível ao <span>ser humano</span>
@@ -381,6 +391,32 @@ O que é mais importante pra gente aqui nessa apresentação é esse formato de 
 -->
 
 ---
+<!-- _class: lead -->
+
+# Outras aplicações do XML
+
+---
+
+# Outras aplicações do XML
+- Configurações de software
+- SVG (Scalable Vector Graphics)
+- RSS (Really Simple Syndication)
+- ODF (OpenDocument Format)
+
+
+<!--
+Armazenar configurações e preferencias do usuário
+
+ODF:
+    .odt: para documentos de texto.
+    .ods: para planilhas.
+    .odp: para apresentações.
+    .odg: para gráficos.
+    .odf: para fórmulas matemáticas.
+-->
+
+
+---
 
 # Conclusão
 - A Web Semântica 
@@ -398,7 +434,6 @@ E o XML foi uma parte crucial de sua fundação, pois permitiu das forma a essas
 - JSON (JavaScript Object Notation)
 - YAML (YAML Ain't Markup Language)
 - TOML (Tom's Obvious Minimal Language)
-- SVG (Scalable Vector Graphics)
 
 
 <!--
