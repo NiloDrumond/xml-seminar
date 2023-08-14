@@ -420,14 +420,14 @@ ODF:
 ---
 
 # MathML
-
+- <span>Math</span>ematical <span>M</span>arkup <span>L</span>anguage
 - Matemática acessível na web
 - W3C
 - Subset de apresentação
 - Subset de conteúdo
 
 
-![bg right contain](./assets/mathxml.png)
+![bg right:44% contain](./assets/mathxml.png)
 
 <!--
 exemplo: Formula quadratica
