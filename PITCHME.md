@@ -53,7 +53,9 @@ HTTP (Hypertext Transfer Protocol): Este é o protocolo que permite a comunicaç
 ---
 
 ## Tim Berners-Lee
-- CERN
+- CERN 
+    - Conseil Européen pour la Recherche Nucléaire
+    - European Organization for Nuclear Research
 - Comunicação e colaboração entre cientistas
 - Publicar informações e criar links
 
@@ -415,6 +417,26 @@ ODF:
     .odf: para fórmulas matemáticas.
 -->
 
+---
+
+# MathML
+
+- Matemática acessível na web
+- W3C
+- Subset de apresentação
+- Subset de conteúdo
+
+
+![bg right contain](./assets/mathxml.png)
+
+<!--
+exemplo: Formula quadratica
+semantico: foco no significado semantico 
+semantico: nunca foi realmente implementado nos navegadores
+apresentação: focado na visualização
+layout: implementações incompletas e inconsistentes
+
+-->
 
 ---
 
@@ -422,7 +444,7 @@ ODF:
 - A Web Semântica 
 - XML como parte da sua fundação
 
-<!-- 
+<!--
 
 Recapitulando um pouco, a gente viu que a web semântica foi um passo importante em tornar a internet na internet "inteligente" de hoje, que não é apenas um conjunto aleatório de dados, mas uma rede estruturada e integrada de informações.
 E o XML foi uma parte crucial de sua fundação, pois permitiu das forma a essas informações.
